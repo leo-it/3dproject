@@ -1,11 +1,19 @@
-import "./Home.css";
+import "./Shenga.css";
 
 import React from 'react'
+import Spline from "@splinetool/react-spline";
 
 const Home = () => {
   return (
-      <div className='background'>
-      </div>
+    <>
+    <Spline scene="https://prod.spline.design/JfZF-njCxNZq3TXo/scene.splinecode" />
+    <button
+      onClick={() => window.location.reload()}
+      className="button--shenga button"
+    >
+      Volver a empezar
+    </button>
+  </>
   );
 };
 
