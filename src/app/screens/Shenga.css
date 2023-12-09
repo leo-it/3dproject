@@ -1,0 +1,44 @@
+.button--shenga {
+  position: absolute;
+  top: 10px;
+
+}
+button{
+  background: black;
+  cursor: pointer;
+  border: none; 
+  padding: 16px 32px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  border-radius: 10px;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -4;
+  width: 100%;
+  height:100%;
+  background: linear-gradient( 60deg,
+ #2ADB62, #E000B9, #C8DE3C, #DEA03C, #E82E20, #DEA03C, #E000B9);
+  background-size: 900%;
+  border-radius: 10px;
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing{
+  0%{
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 400% 0;
+  }
+  100%{
+    background-position: 0 0;
+  }
+}
